@@ -9,7 +9,7 @@ int main(){
    std::string str;
    std::getline(std::cin, str);
    try {
-       std::cout << stack(str) << '\n';
+       std::cout << double(stack(str)) << '\n';
    }
    catch(...){
        std::cout << "Error" << '\n';

@@ -7,6 +7,6 @@ second test project */
 #ifndef STACK_h 
 #define STACK_h 
 
-int stack(std::string str); 
+double stack(std::string str); 
 
 #endif 

@@ -2,16 +2,16 @@
 #include <string>
 #include "stack.h"
 
-int stack(std::string str){
+double stack(std::string str){
     if (str.empty()){
         std::cout<< "Empty string" << '\n';
         return -1;
     }
     int len = str.length();
-    int *stack = new int[len];
+    double *stack = new double[len];
     
     int p = -1;
-    int s;
+    double s;
     std::string digit = "";
     
     for (int i = 0; i < len; ++i){    
@@ -28,25 +28,25 @@ int stack(std::string str){
         }
                
         else if (str[i] == '+'){
-            s = stack[p-1] + stack[p];
+            s = double(stack[p-1]) + stack[p];
             --p;
             stack[p] = s;
             continue;
         }
         else if (str[i] == '-'){
-            s = stack[p-1] - stack[p];
+            s = double(stack[p-1])- stack[p];
             --p;
             stack[p] = s;
             continue;
         }
         else if (str[i] == '*'){
-            s = stack[p-1] * stack[p];
+            s = double(stack[p-1]) * stack[p];
             --p;
             stack[p] = s;
             continue;
         }
         else if (str[i] == '/'){
-            s = stack[p-1] / stack[p];
+            s = double(stack[p-1]) / stack[p];
             --p;
             stack[p] = s;
             continue;
@@ -54,7 +54,7 @@ int stack(std::string str){
         
     }
     
-    int res = stack[p];
+    double res = stack[p];
     delete [] stack;
     return res;
 }
