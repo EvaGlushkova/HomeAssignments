@@ -8,9 +8,9 @@ Home assingment 3 - creates a class "Transformer" and 3 subclasses: "Optimus_Pri
 Composition is implemented using "Gun1" class <br />
 Association is implemented using "Gun2" class <br />
 ## Build
-make
+make <br />
 make test
 ## Run
-./MyPro3
+./MyPro3 <br />
 ./test-MyPro3
 
