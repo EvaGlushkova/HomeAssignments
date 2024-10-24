@@ -4,9 +4,9 @@
 ## Contacts
 st108255@student.spbu.ru
 ## Description
-Home assingment 3 - creates a class "Transformer" and 3 subclasses: "Optimus_Prime", "Jazz" and "Bumblebee" \\
-Composition is implemented using "Gun1" class \\
-Association is implemented using "Gun2" class \\
+Home assingment 3 - creates a class "Transformer" and 3 subclasses: "Optimus_Prime", "Jazz" and "Bumblebee" <br />
+Composition is implemented using "Gun1" class <br />
+Association is implemented using "Gun2" class <br />
 ## Build
 make
 make test
