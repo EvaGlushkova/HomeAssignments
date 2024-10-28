@@ -1,6 +1,6 @@
 #include "Transformer.h"
 
-Transformer::Transformer(){
+Transformer::Transformer():gun1(){
     _level = 1;
     _strength = 100;
     _range = 1;
