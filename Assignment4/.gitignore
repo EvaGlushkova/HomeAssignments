@@ -1,1 +1,4 @@
-
+*.o
+MyPro4
+MyPro4.a
+test-MyPro4
