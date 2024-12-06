@@ -1,6 +1,7 @@
 #include "Transformer.h"
 
-Transformer::Transformer():gun1(){
+Transformer::Transformer():gun1()
+{
     _level = 1;
     _strength = 100;
     _range = 1;
@@ -8,91 +9,109 @@ Transformer::Transformer():gun1(){
 }
 
 Transformer::Transformer(uint level, uint strength, uint range, uint ammo)
-   :_level(level),
-    _strength(strength),
-    _range(range),
-    _ammo(ammo), gun1(){
+    :_level(level),
+     _strength(strength),
+     _range(range),
+     _ammo(ammo), gun1()
+{
 }
 
 
-bool Transformer::fire(){
+bool Transformer::fire()
+{
     _ammo--;
     return true;
 }
 
-bool Transformer::jump(){
+bool Transformer::jump()
+{
     _level++;
     return true;
 }
 
-void Transformer::setLevel(uint level){
+void Transformer::setLevel(uint level)
+{
     _level = level;
 }
 
-void Transformer::setStrength(uint strength){
+void Transformer::setStrength(uint strength)
+{
     _strength = strength;
 }
 
-void Transformer::setRange(uint range){
+void Transformer::setRange(uint range)
+{
     _range = range;
 }
 
-void Transformer::setAmmo(uint ammo){
+void Transformer::setAmmo(uint ammo)
+{
     _ammo = ammo;
 }
 
-void Transformer::setGun1(std::string gun1_name){
+void Transformer::setGun1(std::string gun1_name)
+{
     gun1.setGun1(gun1_name);
 }
 
-void Transformer::setGun2(std::string gun2_name){
+void Transformer::setGun2(std::string gun2_name)
+{
     (*gun2).setGun2(gun2_name);
 }
 
-uint Transformer::getLevel(){
+uint Transformer::getLevel()
+{
     return _level;
 }
 
-uint Transformer::getStrength(){
+uint Transformer::getStrength()
+{
     return _strength;
 }
 
-uint Transformer::getRange(){
+uint Transformer::getRange()
+{
     return _range;
 }
 
-uint Transformer::getAmmo(){
+uint Transformer::getAmmo()
+{
     return _ammo;
 }
-        
-Transformer::~Transformer(){
+
+Transformer::~Transformer()
+{
 }
 
-		
-std::ostream &operator << (std::ostream &out, Transformer &transformer){
-    out << "Level: " << transformer.getLevel() << " Strength: " << 
-    transformer.getStrength() << " Range: " << transformer.getRange() << 
-    " Ammo: " << transformer.getAmmo() << "\n";
-    
+
+std::ostream &operator << (std::ostream &out, Transformer &transformer)
+{
+    out << "Level: " << transformer.getLevel() << " Strength: " <<
+        transformer.getStrength() << " Range: " << transformer.getRange() <<
+        " Ammo: " << transformer.getAmmo() << "\n";
+
     return out;
 }
 
-std::istream &operator >> (std::istream &in, Transformer &transformer){
+std::istream &operator >> (std::istream &in, Transformer &transformer)
+{
     uint lev, st, range, ammo;
     in >> lev;
     in >> st;
     in >> range;
     in >> ammo;
-    
+
     transformer = Transformer(lev, st, range, ammo);
     return in;
 }
 
-bool Transformer::operator < (Transformer& second) {
+bool Transformer::operator < (Transformer& second)
+{
     return this->_level < second._level;
 }
-        
-bool Transformer::operator > (Transformer& second) {
+
+bool Transformer::operator > (Transformer& second)
+{
     return this->_level > second._level;
 }
 

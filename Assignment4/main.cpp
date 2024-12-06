@@ -1,4 +1,4 @@
-/* Glushkova Eva st108255@student.spbu.ru 
+/* Glushkova Eva st108255@student.spbu.ru
 4th test project */
 
 #include "Transformer.h"
@@ -11,5 +11,6 @@
 #include <iostream>
 #include <sstream>
 
-int main(){
+int main()
+{
 }

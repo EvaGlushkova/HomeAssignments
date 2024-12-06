@@ -1,30 +1,47 @@
 #include "Bumblebee.h"
 
-Bumblebee::Bumblebee(){
+Bumblebee::Bumblebee()
+{
     this->_season = "first";
     this->_vision = 100;
 }
 
-bool Bumblebee::transform(){
+bool Bumblebee::transform()
+{
     return true;
 }
 
-void Bumblebee::setSeason(std::string season){
+void Bumblebee::setSeason(std::string season)
+{
     this->_season = season;
 }
 
-void Bumblebee::setVision(uint vision){
+void Bumblebee::setVision(uint vision)
+{
     this->_vision = vision;
 }
 
-std::string Bumblebee::getSeason(){
+std::string Bumblebee::getSeason()
+{
     return _season;
 }
 
-uint Bumblebee::getVision(){
+uint Bumblebee::getVision()
+{
     return _vision;
 }
 
-Bumblebee::~Bumblebee(){
+Bumblebee::~Bumblebee()
+{
+}
+
+bool Bumblebee::operator < (Bumblebee& second)
+{
+    return this->_vision < second._vision;
+}
+
+bool Bumblebee::operator >(Bumblebee& second)
+{
+    return this->_vision > second._vision;
 }
 

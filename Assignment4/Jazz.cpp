@@ -1,30 +1,47 @@
 #include "Jazz.h"
 
-Jazz::Jazz(){
+Jazz::Jazz()
+{
     this->_season = "first";
-    this->_form = "normal";
+    this->_form = 0;
 }
 
-bool Jazz::transform(){
+bool Jazz::transform()
+{
     return true;
 }
 
-void Jazz::setSeason(std::string season){
+void Jazz::setSeason(std::string season)
+{
     this->_season = season;
 }
 
-void Jazz::setForm(std::string form){
+void Jazz::setForm(uint form)
+{
     this->_form = form;
 }
 
-std::string Jazz::getSeason(){
+std::string Jazz::getSeason()
+{
     return _season;
 }
 
-std::string Jazz::getForm(){
+uint Jazz::getForm()
+{
     return _form;
 }
 
-Jazz::~Jazz(){
+Jazz::~Jazz()
+{
+}
+
+bool Jazz::operator < (Jazz& second)
+{
+    return this->_form < second._form;
+}
+
+bool Jazz::operator > (Jazz& second)
+{
+    return this->_form > second._form;
 }
 
