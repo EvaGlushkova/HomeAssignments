@@ -3,20 +3,25 @@
 #include <iostream>
 #include <string>
 
-Autobot::Autobot() : Transformer(){
+Autobot::Autobot() : Transformer()
+{
 }
-        
-void Autobot::transform(){
+
+void Autobot::transform()
+{
     std::cout<< "Autobot transform method\n";
 }
 
-void Autobot::openFire(){
+void Autobot::openFire()
+{
     std::cout<< "Autobot openFire method\n";
 }
 
-void Autobot::jump(){
+void Autobot::jump()
+{
     std::cout<< "Autobot jump method\n";
 }
 
-Autobot::~Autobot(){
+Autobot::~Autobot()
+{
 }

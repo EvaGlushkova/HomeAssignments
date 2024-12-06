@@ -3,20 +3,25 @@
 #include <iostream>
 #include <string>
 
-Decepticon::Decepticon() : Transformer() {
+Decepticon::Decepticon() : Transformer()
+{
 }
-        
-void Decepticon::transform(){
+
+void Decepticon::transform()
+{
     std::cout<< "Decepticon transform method\n";
 }
 
-void Decepticon::openFire(){
+void Decepticon::openFire()
+{
     std::cout<< "Decepticon openFire method\n";
 }
 
-void Decepticon::jump(){
+void Decepticon::jump()
+{
     std::cout<< "Decepticon jump method\n";
 }
 
-Decepticon::~Decepticon(){
+Decepticon::~Decepticon()
+{
 }
