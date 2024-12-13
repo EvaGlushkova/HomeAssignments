@@ -45,3 +45,11 @@ bool Bumblebee::operator >(Bumblebee& second)
     return this->_vision > second._vision;
 }
 
+std::ostream &operator << (std::ostream &out, Bumblebee &transformer)
+{
+    out << "Season: " << transformer.getSeason() << " Vision: " <<
+        transformer.getVision() << "\n";
+
+    return out;
+}
+

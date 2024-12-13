@@ -45,3 +45,10 @@ bool Jazz::operator > (Jazz& second)
     return this->_form > second._form;
 }
 
+std::ostream &operator << (std::ostream &out, Jazz &transformer)
+{
+    out << "Season: " << transformer.getSeason() << " Form: " <<
+        transformer.getForm() << "\n";
+
+    return out;
+}

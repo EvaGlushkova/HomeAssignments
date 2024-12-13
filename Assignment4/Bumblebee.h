@@ -24,6 +24,8 @@ public:
     uint getVision();
 
     ~Bumblebee();
+    
+    friend std::ostream &operator << (std::ostream &out, Bumblebee &transformer);
 
     bool operator < (Bumblebee& second);
     bool operator > (Bumblebee& second);

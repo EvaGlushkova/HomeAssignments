@@ -24,6 +24,8 @@ public:
     std::string getSeason();
 
     ~Jazz();
+    
+    friend std::ostream &operator << (std::ostream &out, Jazz &transformer);
 
     bool operator < (Jazz& second);
     bool operator > (Jazz& second);
