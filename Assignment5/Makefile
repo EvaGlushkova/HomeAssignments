@@ -12,9 +12,11 @@ AFLAGS = rsv
 
 CCXFLAGS = -I. -std=c++17 -Wall -Wpedantic -Werror -g -fPIC
 
-LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
+LIBDIR = .
 
-LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
+LDXXFLAGS = -L$(LIBDIR) -l$(PROJECT)
+
+LDGTESTFLAGS = -L$(LIBDIR) -lgtest -lgtest_main -lpthread
 
 DEPS = Transformer.h Autobot.h Decepticon.h 
 
@@ -23,7 +25,7 @@ OBJ = main.o Transformer.o Autobot.o Decepticon.o
 TEST-OBJ = test-Transformer.o
 
 
-.PHONY: default
+.PHONY: default all clean cleanall
 
 default: all;
 
@@ -44,7 +46,7 @@ test: $(TESTPROJECT)
 
 all: $(PROJECT)
 
-.PHONY: clean
+.PHONY: clean cleanall
 
 clean:
 	rm -f *.o
