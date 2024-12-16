@@ -10,9 +10,9 @@ class Transformer
 public:
     Transformer();
 
-    virtual void transform() = 0;
-    virtual void openFire() = 0;
-    virtual void jump() = 0;
+    virtual void transform();
+    virtual void openFire();
+    virtual void jump();
 
     ~Transformer();
 };
