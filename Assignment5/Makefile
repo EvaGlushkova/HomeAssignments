@@ -10,7 +10,7 @@ A = ar
 
 AFLAGS = rsv
 
-CCXFLAGS = -I. -std=c++17 -Wall -Wpedantic -Werror -g -fPIC
+CXXFLAGS = -I. -std=c++17 -Wall -Wpedantic -Werror -g -fPIC
 
 LIBDIR = .
 
