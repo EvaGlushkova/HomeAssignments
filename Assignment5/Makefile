@@ -12,7 +12,7 @@ AFLAGS = rsv
 
 CXXFLAGS = -I. -std=c++17 -Wall -Wpedantic -Werror -g -fPIC
 
-LDXXFLAGS = $(CCXFLAGS) -L. -l:$(LIBPROJECT)
+LDXXFLAGS = $(CXXFLAGS) -L. -l:$(LIBPROJECT)
 
 LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
 
