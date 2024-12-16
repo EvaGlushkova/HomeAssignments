@@ -58,7 +58,6 @@ TEST(AutobotTransform2, Transformer)
     autobot->transform();
     std::cout.rdbuf(coutbuf);
     ASSERT_EQ(out.str(), "Autobot transform method\n");
-    delete autobot;
 }
 
 TEST(DecepticonTransform, Transformer)
@@ -70,7 +69,6 @@ TEST(DecepticonTransform, Transformer)
     decepticon->transform();
     std::cout.rdbuf(coutbuf);
     ASSERT_EQ(out.str(), "Decepticon transform method\n");
-    delete decepticon;
 }
 
 TEST(Tests, Transformer)
@@ -140,9 +138,5 @@ TEST(Tests, Transformer)
         out.clear();
     }
 
-    for (Transformer* i: transf_vector)
-    {
-        delete i;
-    }
 
 }
