@@ -25,7 +25,7 @@ OBJ = main.o Transformer.o Autobot.o Decepticon.o
 TEST-OBJ = test-Transformer.o
 
 
-.PHONY: default all clean cleanall
+.PHONY: default 
 
 default: all;
 
