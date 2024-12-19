@@ -10,5 +10,5 @@ make <br />
 make test
 ## Run
 ./MyPro6 <br />
-./test-MyPro5
+./test-MyPro6
 
