@@ -4,7 +4,7 @@
 ## Contacts
 st108255@student.spbu.ru
 ## Description
-Home assingment 6 - a template class, partial specialization of this template class 
+Home assignment 6 - a template class, partial specialization of this template class 
 ## Build
 make <br />
 make test
